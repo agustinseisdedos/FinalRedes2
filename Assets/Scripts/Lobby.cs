@@ -34,7 +34,7 @@ public class Lobby : MonoBehaviourPunCallbacks
 
     public override void OnPlayerEnteredRoom(Photon.Realtime.Player newPlayer)
     {
-        if (PhotonNetwork.PlayerList.Length >= 3)
+        if (PhotonNetwork.PlayerList.Length >= 4)
         {
             Debug.Log("Mas de 4 jugadores");
             PhotonNetwork.LoadLevel("Juego");
@@ -47,7 +47,7 @@ public class Lobby : MonoBehaviourPunCallbacks
     }
     public override void OnJoinedRoom()
     {
-        if (PhotonNetwork.PlayerList.Length >= 3)
+        if (PhotonNetwork.PlayerList.Length >= 4)
         {
             Debug.Log("Mas de 5 jugadores");
             PhotonNetwork.LoadLevel("Juego");
